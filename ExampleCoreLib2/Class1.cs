@@ -1,8 +1,10 @@
-﻿using System;
-
-namespace ExampleCoreLib2
+﻿namespace ExampleCoreLib2
 {
-    public class Class1
+    public class ExampleClass
     {
+        public int Multiply(int a, int b)
+        {
+            return a * b;
+        }
     }
 }
