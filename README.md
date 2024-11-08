@@ -22,7 +22,7 @@ Build project:
 dotnet build
 ```
 
-Run unit tests using `NUunit`:
+Run unit tests using `NUnit`:
 ```shell
 dotnet test
 ```
