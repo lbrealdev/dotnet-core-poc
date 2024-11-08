@@ -24,5 +24,5 @@ dotnet build
 
 Run unit tests using `NUnit`:
 ```shell
-dotnet test
+dotnet test --logger "console;verbosity=detailed"
 ```
