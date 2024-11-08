@@ -1,6 +1,6 @@
-# dotnet-core-poc
+# .NET Core - NUnit PoC
 
-### Usage
+## Usage
 
 Pull `dotnet-core-sdk` image:
 ```shell
