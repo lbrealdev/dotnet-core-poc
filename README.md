@@ -1,6 +1,6 @@
-# dotnet-core-poc
+# .NET Core - NUnit PoC
 
-### Usage
+## Usage
 
 Pull `dotnet-core-sdk` image:
 ```shell
@@ -19,10 +19,14 @@ dotnet restore
 
 Build project:
 ```shell
-dotnet build
+dotnet build /t:Rebuild 
 ```
 
-Run unit tests using `NUnit`:
+Package library:
 ```shell
-dotnet test --logger "console;verbosity=detailed"
+dotnet pack
+
+or
+
+dotnet pack -c Release
 ```

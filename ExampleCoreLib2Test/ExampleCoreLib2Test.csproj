@@ -3,16 +3,24 @@
     <PropertyGroup>
         <TargetFramework>netcoreapp3.1</TargetFramework>
         <IsTestProject>true</IsTestProject>
+        <RunPostBuildEvent>Always</RunPostBuildEvent>
     </PropertyGroup>
-    
+
     <ItemGroup>
-      <ProjectReference Include="..\ExampleCoreLib2\ExampleCoreLib2.csproj" />
+        <ProjectReference Include="..\ExampleCoreLib2\ExampleCoreLib2.csproj" />
     </ItemGroup>
 
     <ItemGroup>
-      <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.9.4" />
-      <PackageReference Include="NUnit" Version="3.13.3" />
-      <PackageReference Include="NUnit3TestAdapter" Version="4.3.0" />
+        <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.9.4" />
+        <PackageReference Include="NUnit" Version="3.13.3" />
+        <PackageReference Include="NUnit3TestAdapter" Version="4.3.0" />
     </ItemGroup>
 
+    <Target Name="RunTestsAfterBuild" AfterTargets="Rebuild" Condition="'$(MSBuildProjectName)' == 'ExampleCoreLib2Test'">
+        <Exec Command="dotnet test --no-build --logger 'console;verbosity=detailed'" />
+    </Target>
+
+    <Target Name="PostBuild" AfterTargets="PostBuildEvent">
+      <Exec Command="echo &quot;Running NUnit Unit Tests&quot;" />
+    </Target>
 </Project>
