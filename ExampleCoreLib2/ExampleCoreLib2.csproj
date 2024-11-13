@@ -4,9 +4,9 @@
         <TargetFramework>netcoreapp3.1</TargetFramework>
         <Title>ExampleCoreLib2</Title>
         <Authors>To-Ge-Da</Authors>
-        <Description>ExampleCoreLib2 to MathOperations Class</Description>
+        <Description>ExampleCoreLib2 library for MathOperations functions</Description>
         <RepositoryUrl>https://github.com/lbrealdev/dotnet-core-poc</RepositoryUrl>
-        <PackageTags>netcore, lib, nunit</PackageTags>
+        <PackageTags>netcore, library, nunit</PackageTags>
     </PropertyGroup>
 
     <Target Name="PreBuild" BeforeTargets="PreBuildEvent">
