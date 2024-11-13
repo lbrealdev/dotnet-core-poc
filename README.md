@@ -21,3 +21,12 @@ Build project:
 ```shell
 dotnet build /t:Rebuild 
 ```
+
+Package library:
+```shell
+dotnet pack
+
+or
+
+dotnet pack -c Release
+```
