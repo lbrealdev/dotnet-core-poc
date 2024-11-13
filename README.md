@@ -19,10 +19,5 @@ dotnet restore
 
 Build project:
 ```shell
-dotnet build
-```
-
-Run unit tests using `NUnit`:
-```shell
-dotnet test --logger "console;verbosity=detailed"
+dotnet build /t:Rebuild 
 ```

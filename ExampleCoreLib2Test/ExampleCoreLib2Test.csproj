@@ -15,7 +15,7 @@
         <PackageReference Include="NUnit3TestAdapter" Version="4.3.0" />
     </ItemGroup>
 
-    <Target Name="RunTestsAfterBuild" AfterTargets="Build" Condition="'$(MSBuildProjectName)' == 'ExampleCoreLib2Test'">
+    <Target Name="RunTestsAfterBuild" AfterTargets="Rebuild" Condition="'$(MSBuildProjectName)' == 'ExampleCoreLib2Test'">
         <Exec Command="dotnet test --no-build --logger 'console;verbosity=detailed'" />
     </Target>
 </Project>
