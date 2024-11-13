@@ -2,6 +2,15 @@
 
     <PropertyGroup>
         <TargetFramework>netcoreapp3.1</TargetFramework>
+        <Title>ExampleCoreLib2</Title>
+        <Authors>To-Ge-Da</Authors>
+        <Description>ExampleCoreLib2 to MathOperations Class</Description>
+        <RepositoryUrl>https://github.com/lbrealdev/dotnet-core-poc</RepositoryUrl>
+        <PackageTags>netcore, lib, nunit</PackageTags>
     </PropertyGroup>
+
+    <Target Name="PreBuild" BeforeTargets="PreBuildEvent">
+      <Exec Command="echo &quot;Running .NET core build&quot;" />
+    </Target>
 
 </Project>

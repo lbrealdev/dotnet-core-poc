@@ -3,6 +3,7 @@
     <PropertyGroup>
         <TargetFramework>netcoreapp3.1</TargetFramework>
         <IsTestProject>true</IsTestProject>
+        <RunPostBuildEvent>Always</RunPostBuildEvent>
     </PropertyGroup>
 
     <ItemGroup>
@@ -17,5 +18,9 @@
 
     <Target Name="RunTestsAfterBuild" AfterTargets="Rebuild" Condition="'$(MSBuildProjectName)' == 'ExampleCoreLib2Test'">
         <Exec Command="dotnet test --no-build --logger 'console;verbosity=detailed'" />
+    </Target>
+
+    <Target Name="PostBuild" AfterTargets="PostBuildEvent">
+      <Exec Command="echo &quot;Running NUnit Unit Tests&quot;" />
     </Target>
 </Project>
