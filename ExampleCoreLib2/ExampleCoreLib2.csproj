@@ -2,11 +2,13 @@
 
     <PropertyGroup>
         <TargetFramework>netcoreapp3.1</TargetFramework>
-        <Title>ExampleCoreLib2</Title>
-        <Authors>To-Ge-Da</Authors>
+        <Title>ExampleCoreLib2</Title> <!-- Package title -->
+        <PackageId>ExampleCoreLib2</PackageId> <!-- Package name -->
+        <Version>1.0.0</Version> <!-- Package version -->
+        <Authors>To-Ge-Da</Authors> <!-- Name of the author or organization -->
         <Description>ExampleCoreLib2 library for MathOperations functions</Description>
-        <RepositoryUrl>https://github.com/lbrealdev/dotnet-core-poc</RepositoryUrl>
-        <PackageTags>netcore, library, nunit</PackageTags>
+        <RepositoryUrl>https://github.com/lbrealdev/dotnet-core-poc</RepositoryUrl> <!-- Package repository url -->
+        <PackageTags>netcore, library, nunit</PackageTags> <!-- Package tags -->
     </PropertyGroup>
 
     <Target Name="PreBuild" BeforeTargets="PreBuildEvent">
